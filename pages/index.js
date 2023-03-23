@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/Image'
+import Image from 'next/image'
 import styles from '/styles/Home.module.css'
 import mainImage from '/assets/images/test.jpg'
 import { Button, Form, Spinner } from 'react-bootstrap'
