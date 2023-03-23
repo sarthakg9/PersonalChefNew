@@ -8,9 +8,13 @@ import Footer from '@components/Footer'
 import { FormEvent, useState } from 'react'
 
 export default function Home() {
+
   const [recipe, setRecipe] = useState("");
   const [recipeLoading, setRecipeLoading] = useState(false);
   const [recipeLoadingError, setRecipeLoadingError] = useState(false);
+  const [recipe1, setRecipe1] = useState("");
+  const [recipe2, setRecipe2] = useState("");
+  const [recipe3, setRecipe3] = useState("");
 
 
   async function handleSubmit(e){
@@ -27,6 +31,11 @@ export default function Home() {
         const response = await fetch("/api/recipe?prompt=" + encodeURIComponent(prompt));
         const body = await response.json();
         setRecipe(body.recipe);
+        setRecipe1(body.recipe1);
+        setRecipe2(body.recipe2);
+        setRecipe3(body.recipe3);
+
+
 
       } catch (error) {
         console.error(error);
@@ -70,7 +79,7 @@ export default function Home() {
         </div>
         <Form onSubmit = {handleSubmit} className = {styles.inputForm}>
           <Form.Group className='mb-3' controlId = 'prompt-input'>
-            <Form.Label>What to cook for next meal?</Form.Label>
+            <Form.Label>What are you thinking?</Form.Label>
             <Form.Control 
             name = 'prompt'
             placeholder = 'e.g. indian veg breakfast, simple arabic snacks'
@@ -84,7 +93,11 @@ export default function Home() {
         </Form>
         { recipeLoading && <Spinner animation='border' /> }
         {recipeLoadingError && "Something went wrong. Please try again."}
-        {recipe && <h5>{recipe}</h5>}
+        {recipe1 && <h5>{recipe1}</h5>}
+        {recipe2 && <h6>{recipe2}</h6>}
+        {recipe3 && <h6>{recipe3}</h6>}
+
+
       </main>
 
       <Footer />
