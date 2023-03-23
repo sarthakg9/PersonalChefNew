@@ -20,7 +20,7 @@ export default async function handler(req, res){
         model: "text-davinci-003",
         prompt: `Suggest a food recipe based on the following prompt (if you cannot suggest any recipe, make one yourself):\n
         Prompt: ${prompt}\n
-        Recipe should be of the format- Title:, Ingredients:, Instructions: `,
+        Recipe should be of the format: Title:, Ingredients:, Instructions: `,
         max_tokens: 1024,
         temperature: 0.8,
         presence_penalty: 0.5,
