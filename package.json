@@ -8,9 +8,15 @@
     "export": "next export"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "cypress": "^10.0.3",
     "next": "^12.1.5",
+    "openai": "^3.2.1",
     "react": "^18.0.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.0.2"
   }
 }
