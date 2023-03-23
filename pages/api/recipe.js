@@ -22,9 +22,9 @@ export default async function handler(req, res){
         Prompt: ${prompt}\n
         Recipe:`,
         max_tokens: 1024,
-        temperature: 0.25,
-        presence_penalty: 0,
-        frequency_penalty: 0,
+        temperature: 0.8,
+        presence_penalty: 0.5,
+        frequency_penalty: 0.5,
     });
     const recipe = completion.data.choices[0].text;
     const recipesplit = recipe.split('Ingredients:')
