@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/Image'
-import styles from '../styles/Home.module.css'
-import mainImage from '../assets/images/test.jpg'
+import styles from '/styles/Home.module.css'
+import mainImage from '/assets/images/test.jpg'
 import { Button, Form, Spinner } from 'react-bootstrap'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+
 import { FormEvent, useState } from 'react'
 
 export default function Home() {
@@ -60,7 +59,6 @@ export default function Home() {
       </Head>
 
       <main className = {styles.main}>
-        {/* <Header title="Welcome to my app!" /> */}
         <h1>ChefAI</h1>
         <h2>
           powered by GPT-3
@@ -100,7 +98,6 @@ export default function Home() {
 
       </main>
 
-      <Footer />
     </div>
   )
 }
