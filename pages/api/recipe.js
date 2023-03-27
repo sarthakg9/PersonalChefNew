@@ -28,7 +28,7 @@ export default async function handler(req, res){
     });
     const recipe = completion.data.choices[0].text;
     const recipesplit = recipe.split('Ingredients:')
-    const recipe1 = recipesplit[0]
+    const recipe1 = recipesplit[0].substring(8)
     const recipe2 = 'Ingredients:\n' + recipesplit[1].split('Instructions:')[0]
     const recipe3 = 'Instructions:\n' + recipesplit[1].split('Instructions:')[1]
     res.status(200).json({ recipe1, recipe2, recipe3 });
