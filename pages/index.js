@@ -70,7 +70,7 @@ export default function Home() {
           <Image 
           src = {mainImage}
           fill
-          alt ='a picture of a robot in a kitchen'
+          alt ='a picture of a robot acting as a butler to a human sitting on a sofa'
           priority
           className={styles.mainImage}
           />

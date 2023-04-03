@@ -21,7 +21,7 @@ export default async function handler(req, res){
         prompt: `Suggest a food recipe based on the following prompt (if you cannot suggest any recipe, make one yourself):\n
         Prompt: ${prompt}\n
         Recipe should be of the format: Title:, Ingredients:, Instructions: `,
-        max_tokens: 1024,
+        max_tokens: 2048,
         temperature: 0.8,
         presence_penalty: 0.5,
         frequency_penalty: 0.5,
